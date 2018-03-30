@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.projetolp3.presenter.view.activity.MainActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mainContraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackgroundApp"
+        android:elevation="8dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/mainCardViewPerfil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:elevation="18dp"
+            app:cardBackgroundColor="@color/colorViewCardPerfil"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="12dp"
+            app:contentPadding="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="6dp"
+                android:minHeight="6dp"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="86dp"
+                tools:layout_editor_absoluteY="123dp">
+
+                <TextView
+                    android:id="@+id/mainAlterarFoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="alterar foto"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                    android:layout_marginLeft="8dp" />
+
+                <TextView
+                    android:id="@+id/mainNome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Nome:"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="8dp" />
+
+                <TextView
+                    android:id="@+id/mainNomePet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="nomePet"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/mainNome"
+                    app:layout_constraintStart_toEndOf="@+id/mainNome" />
+
+                <TextView
+                    android:id="@+id/mainIdade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Idade:"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/mainNome"
+                    android:layout_marginLeft="8dp" />
+
+                <TextView
+                    android:id="@+id/mainIdadePet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="00"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/mainIdade"
+                    app:layout_constraintStart_toEndOf="@+id/mainIdade" />
+
+                <TextView
+                    android:id="@+id/mainSaude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Saúde:"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/mainIdade"
+                    android:layout_marginLeft="8dp" />
+
+                <TextView
+                    android:id="@+id/mainSaudePet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Ok"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/mainSaude"
+                    app:layout_constraintStart_toEndOf="@+id/mainSaude" />
+
+                <TextView
+                    android:id="@+id/mainEditarPerfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Editar Perfil"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="8dp" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_mypet"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="607dp"
+            tools:layout_editor_absoluteY="365dp" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:elevation="18dp"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="7dp"
+            app:contentPadding="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainCardViewPerfil">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CALENDARIO" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/mainBotaoAdicionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:clickable="true"
+            android:onClick="botaoAdicionar"
+            app:backgroundTint="@color/ic_button_add_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
