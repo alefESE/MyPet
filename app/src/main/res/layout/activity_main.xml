@@ -18,8 +18,6 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/mainCardViewPerfil"
-            android:onClick="clickPerfil"
-
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -44,16 +42,6 @@
                 tools:layout_editor_absoluteX="86dp"
                 tools:layout_editor_absoluteY="123dp">
 
-                <TextView
-                    android:id="@+id/mainAlterarFoto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="alterar foto"
-                    android:textColor="@android:color/black"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView2"
-                    android:layout_marginLeft="8dp" />
 
                 <TextView
                     android:id="@+id/mainNome"
@@ -63,9 +51,9 @@
                     android:layout_marginTop="16dp"
                     android:text="Nome:"
                     android:textColor="@android:color/black"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginLeft="8dp" />
+                    android:textSize="@dimen/textoPadrao"
+                    app:layout_constraintStart_toEndOf="@+id/mainFotoPet"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/mainNomePet"
@@ -74,6 +62,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginStart="8dp"
                     android:text="nomePet"
+                    android:textSize="@dimen/textoPadrao"
                     android:textColor="@android:color/black"
                     app:layout_constraintBaseline_toBaselineOf="@+id/mainNome"
                     app:layout_constraintStart_toEndOf="@+id/mainNome" />
@@ -85,8 +74,9 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:text="Idade:"
+                    android:textSize="@dimen/textoPadrao"
                     android:textColor="@android:color/black"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintStart_toEndOf="@+id/mainFotoPet"
                     app:layout_constraintTop_toBottomOf="@+id/mainNome"
                     android:layout_marginLeft="8dp" />
 
@@ -97,6 +87,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginStart="8dp"
                     android:text="00"
+                    android:textSize="@dimen/textoPadrao"
                     android:textColor="@android:color/black"
                     app:layout_constraintBaseline_toBaselineOf="@+id/mainIdade"
                     app:layout_constraintStart_toEndOf="@+id/mainIdade" />
@@ -108,8 +99,9 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:text="Saúde:"
+                    android:textSize="@dimen/textoPadrao"
                     android:textColor="@android:color/black"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintStart_toEndOf="@+id/mainFotoPet"
                     app:layout_constraintTop_toBottomOf="@+id/mainIdade"
                     android:layout_marginLeft="8dp" />
 
@@ -120,6 +112,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginStart="8dp"
                     android:text="Ok"
+                    android:textSize="@dimen/textoPadrao"
                     android:textColor="@android:color/black"
                     app:layout_constraintBaseline_toBaselineOf="@+id/mainSaude"
                     app:layout_constraintStart_toEndOf="@+id/mainSaude" />
@@ -127,36 +120,32 @@
                 <TextView
                     android:id="@+id/mainEditarPerfil"
                     android:layout_width="wrap_content"
-                    android:layout_height="16dp"
-                    android:layout_marginBottom="8dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
+                    android:onClick="editarPerfil"
                     android:text="Editar Perfil"
                     android:textColor="@android:color/black"
+                    android:textSize="@dimen/textoPadrao"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/mainFotoPet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginLeft="8dp" />
+                    app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_mypet"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="607dp"
-            tools:layout_editor_absoluteY="365dp" />
+
 
         <android.support.v7.widget.CardView
             android:id="@+id/cardView3"
@@ -178,6 +167,7 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/textoPadrao"
                 android:text="CALENDARIO" />
 
         </android.support.v7.widget.CardView>

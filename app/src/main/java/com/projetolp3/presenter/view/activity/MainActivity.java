@@ -19,7 +19,7 @@ public class MainActivity extends Activity {
         startActivity(new Intent(MainActivity.this, AddActivity.class));
     }
 
-    public void clickPerfil(View view) {
+    public void editarPerfil(View view) {
         startActivity( new Intent( MainActivity.this, PerfilActivity.class ) );
     }
 }
