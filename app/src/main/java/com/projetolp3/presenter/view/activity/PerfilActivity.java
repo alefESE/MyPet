@@ -1,9 +1,11 @@
-package com.projetolp3.mypet;
+package com.projetolp3.presenter.view.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Perfil extends AppCompatActivity {
+import com.projetolp3.mypet.R;
+
+public class PerfilActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
