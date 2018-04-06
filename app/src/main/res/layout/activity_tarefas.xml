@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -90,75 +91,75 @@
                 app:layout_constraintStart_toEndOf="@+id/tarefasTextoBanho" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/tarefasImagemComida"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toStartOf="@+id/imageView7"
+                app:layout_constraintEnd_toStartOf="@+id/tarefasImagemBrincar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tarefasTextoBanho"
                 app:srcCompat="@mipmap/ic_image_tarefa_comida" />
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/tarefasImagemBrincar"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                app:layout_constraintStart_toEndOf="@+id/tarefasImagemComida"
                 app:layout_constraintTop_toBottomOf="@+id/tarefasTextoPasseio"
                 app:srcCompat="@mipmap/ic_image_tarefa_brincar" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/tarefasTextoComida"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
-            android:text="TextView"
+            android:text="Comida"
             android:textSize="@dimen/textoTarefa"
-            app:layout_constraintEnd_toStartOf="@+id/textView6"
+            app:layout_constraintEnd_toStartOf="@+id/tarefasTextoBrincar"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+            app:layout_constraintTop_toBottomOf="@+id/tarefasImagemComida" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/tarefasTextoBrincar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
-            android:text="TextView"
+            android:text="Brincar"
             android:textSize="@dimen/textoTarefa"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+            app:layout_constraintStart_toEndOf="@+id/tarefasTextoComida"
+            app:layout_constraintTop_toBottomOf="@+id/tarefasImagemBrincar" />
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/tarefasImagemTosa"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                app:layout_constraintEnd_toStartOf="@+id/tarefasImagemRemedio"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/tarefasTextoComida"
                 app:srcCompat="@mipmap/ic_image_tarefa_tosa" />
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/tarefasImagemRemedio"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView8"
-                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:layout_constraintStart_toEndOf="@+id/tarefasImagemTosa"
+                app:layout_constraintTop_toBottomOf="@+id/tarefasTextoBrincar"
                 app:srcCompat="@mipmap/ic_image_tarefa_remedio" />
 
 
