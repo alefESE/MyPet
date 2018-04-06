@@ -18,4 +18,8 @@ public class MainActivity extends Activity {
     public void botaoAdicionar(View view) {
         startActivity(new Intent(MainActivity.this, AddActivity.class));
     }
+
+    public void clickPerfil(View view) {
+        startActivity( new Intent( MainActivity.this, PerfilActivity.class ) );
+    }
 }

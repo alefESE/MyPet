@@ -50,6 +50,8 @@
         <activity
             android:name="com.projetolp3.presenter.view.activity.MapsActivity"
             android:label="@string/map_name"></activity>
+        <activity android:name="com.projetolp3.presenter.view.activity.PerfilActivity"></activity>
+
     </application>
 
 </manifest>
