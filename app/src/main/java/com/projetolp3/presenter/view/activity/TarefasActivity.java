@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.projetolp3.mypet.R;
 
-public class AddActivity extends AppCompatActivity {
+public class TarefasActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

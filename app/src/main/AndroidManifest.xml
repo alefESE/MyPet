@@ -33,7 +33,7 @@
         <activity
             android:name="com.projetolp3.presenter.view.activity.MainActivity"
             android:label="@string/app_name"></activity>
-        <activity android:name="com.projetolp3.presenter.view.activity.AddActivity" />
+        <activity android:name="com.projetolp3.presenter.view.activity.TarefasActivity" />
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

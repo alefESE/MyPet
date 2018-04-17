@@ -6,10 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackgroundApp"
-    tools:context="com.projetolp3.presenter.view.activity.AddActivity">
+    tools:context="com.projetolp3.presenter.view.activity.TarefasActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textCalendario"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -22,149 +23,163 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
 
-    <android.support.constraint.ConstraintLayout
-
-        android:id="@+id/tarefaConstraint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="72dp"
-
-
-        android:background="@android:color/white"
+        android:id="@+id/tarefaScroolView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/textCalendario"
+        tools:context="com.projetolp3.presenter.view.activity.TarefasActivity">
 
+        <android.support.constraint.ConstraintLayout
 
-
-
-        <ImageView
-            android:id="@+id/tarefaImagemBanho"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:id="@+id/tarefaConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toStartOf="@+id/tarefaImagemPasseio"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_image_tarefa_banho" />
-
-        <ImageView
-            android:id="@+id/tarefaImagemPasseio"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tarefaImagemBanho"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_image_tarefa_passeio" />
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white"
+            android:scrollbars="vertical"
 
-        <TextView
-            android:id="@+id/tarefasTextoBanho"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:text="Banho"
-            android:textSize="@dimen/textoTarefa"
-            app:layout_constraintEnd_toStartOf="@+id/tarefasTextoPasseio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tarefaImagemBanho" />
-
-        <TextView
-            android:id="@+id/tarefasTextoPasseio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:text="Passeio"
-            android:textSize="@dimen/textoTarefa"
-            app:layout_constraintBaseline_toBaselineOf="@+id/tarefasTextoBanho"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tarefasTextoBanho" />
-
-        <ImageView
-            android:id="@+id/tarefasImagemComida"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toStartOf="@+id/tarefasImagemBrincar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tarefasTextoBanho"
-            app:srcCompat="@mipmap/ic_image_tarefa_comida" />
-
-        <ImageView
-            android:id="@+id/tarefasImagemBrincar"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tarefasImagemComida"
-            app:layout_constraintTop_toBottomOf="@+id/tarefasTextoPasseio"
-            app:srcCompat="@mipmap/ic_image_tarefa_brincar" />
-
-        <TextView
-            android:id="@+id/tarefasTextoComida"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:text="TextView"
-            android:textSize="@dimen/textoTarefa"
-            app:layout_constraintEnd_toStartOf="@+id/tarefasTextoBrincar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tarefasImagemComida" />
-
-        <TextView
-            android:id="@+id/tarefasTextoBrincar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:text="Brincar"
-            android:textSize="@dimen/textoTarefa"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tarefasTextoComida"
-            app:layout_constraintTop_toBottomOf="@+id/tarefasImagemBrincar" />
-
-        <ImageView
-            android:id="@+id/tarefasImagemTosa"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toStartOf="@+id/tarefasImagemRemedio"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tarefasTextoComida"
-            app:srcCompat="@mipmap/ic_image_tarefa_tosa" />
-
-        <ImageView
-            android:id="@+id/tarefasImagemRemedio"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tarefasImagemTosa"
-            app:layout_constraintTop_toBottomOf="@+id/tarefasTextoBrincar"
-            app:srcCompat="@mipmap/ic_image_tarefa_remedio" />
+            app:layout_constraintTop_toBottomOf="@+id/tarefaScroolView">
 
 
-    </android.support.constraint.ConstraintLayout>
+            <ImageView
+                android:id="@+id/tarefaImagemBanho"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/tarefaImagemPasseio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_image_tarefa_banho" />
 
+            <ImageView
+                android:id="@+id/tarefaImagemPasseio"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tarefaImagemBanho"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_image_tarefa_passeio" />
+
+            <TextView
+                android:id="@+id/tarefasTextoBanho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Banho"
+                android:textSize="@dimen/textoTarefa"
+                app:layout_constraintEnd_toStartOf="@+id/tarefasTextoPasseio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tarefaImagemBanho" />
+
+            <TextView
+                android:id="@+id/tarefasTextoPasseio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Passeio"
+                android:textSize="@dimen/textoTarefa"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tarefasTextoBanho"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tarefasTextoBanho" />
+
+            <ImageView
+                android:id="@+id/tarefasImagemComida"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/tarefasImagemBrincar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tarefasTextoBanho"
+                app:srcCompat="@mipmap/ic_image_tarefa_comida" />
+
+            <ImageView
+                android:id="@+id/tarefasImagemBrincar"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tarefasImagemComida"
+                app:layout_constraintTop_toBottomOf="@+id/tarefasTextoPasseio"
+                app:srcCompat="@mipmap/ic_image_tarefa_brincar" />
+
+            <TextView
+                android:id="@+id/tarefasTextoComida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="TextView"
+                android:textSize="@dimen/textoTarefa"
+                app:layout_constraintEnd_toStartOf="@+id/tarefasTextoBrincar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tarefasImagemComida" />
+
+            <TextView
+                android:id="@+id/tarefasTextoBrincar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Brincar"
+                android:textSize="@dimen/textoTarefa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tarefasTextoComida"
+                app:layout_constraintTop_toBottomOf="@+id/tarefasImagemBrincar" />
+
+            <ImageView
+                android:id="@+id/tarefasImagemTosa"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/tarefasImagemRemedio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tarefasTextoComida"
+                app:srcCompat="@mipmap/ic_image_tarefa_tosa" />
+
+            <ImageView
+                android:id="@+id/tarefasImagemRemedio"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tarefasImagemTosa"
+                app:layout_constraintTop_toBottomOf="@+id/tarefasTextoBrincar"
+                app:srcCompat="@mipmap/ic_image_tarefa_remedio" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>

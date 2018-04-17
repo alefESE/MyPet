@@ -16,7 +16,7 @@ public class MainActivity extends Activity {
     }
 
     public void botaoAdicionar(View view) {
-        startActivity(new Intent(MainActivity.this, AddActivity.class));
+        startActivity(new Intent(MainActivity.this, TarefasActivity.class));
     }
 
     public void editarPerfil(View view) {
