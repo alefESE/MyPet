@@ -19,154 +19,131 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <TextView
+        android:id="@+id/perfilNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_span="1"
+        android:text="Nome:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/perfilFoto" />
+
+    <EditText
+        android:id="@+id/perfilNomePet"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:shrinkColumns="*"
-        android:stretchColumns="*"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_span="3"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="nome do pet"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/perfilNome"
+        app:layout_constraintTop_toBottomOf="@+id/perfilFoto" />
+
+    <ImageView
+        android:id="@+id/perfilImagemDataNascimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_span="1"
+        android:src="@drawable/ic_image_data_nascimento"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/perfilFoto">
+        app:layout_constraintTop_toBottomOf="@+id/perfilNome" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
+    <EditText
+        android:id="@+id/perfilDataNascimento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_span="2"
+        android:ems="10"
+        android:inputType="date"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/perfilImagemDataNascimento"
+        app:layout_constraintTop_toBottomOf="@+id/perfilNomePet" />
 
-            <TextView
-                android:id="@+id/perfilNome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_span="1"
-                android:text="Nome:"
-                android:textSize="18sp" />
+    <TextView
+        android:id="@+id/perfilRaca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_span="1"
+        android:text="Raça:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/perfilDataNascimento" />
 
-            <EditText
-                android:id="@+id/perfilNomePet"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_span="3"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="nome do pet"
-                android:textSize="18sp" />
+    <EditText
+        android:id="@+id/perfilRacaPet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_span="3"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/perfilRaca"
+        app:layout_constraintTop_toBottomOf="@+id/perfilDataNascimento" />
 
-        </TableRow>
+    <TextView
+        android:id="@+id/perfilSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_span="1"
+        android:text="Sexo:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/perfilRaca" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
+    <RadioGroup
+        android:id="@+id/perfilGrupoBotoesSexo"
 
-            <ImageView
-                android:id="@+id/perfilImagemDataNascimento"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_span="1"
-                android:src="@drawable/ic_image_data_nascimento" />
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_span="1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/perfilRaca"
+        app:layout_constraintTop_toBottomOf="@+id/perfilRacaPet">
 
+        <RadioButton
+            android:id="@+id/perfilBotaoMacho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="1"
+            android:layout_weight="1"
+            android:text="Macho"
+            tools:text="Macho" />
 
-            <EditText
-                android:id="@+id/perfilDataNascimento"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_span="2"
-                android:ems="10"
-                android:inputType="date"
-                android:textSize="18sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
-
-            <TextView
-                android:id="@+id/perfilRaca"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_span="1"
-                android:text="Raça:"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/perfilRacaPet"
-                android:layout_width="wrap_content"
-                android:layout_height="16dp"
-                android:layout_span="3"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:textSize="18sp"
-                tools:layout_editor_absoluteX="86dp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/perfilSexo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_span="1"
-                android:text="Sexo:"
-                android:textSize="18sp" />
-
-            <RadioGroup
-                android:id="@+id/perfilGroupRadioButton"
-
-                android:layout_width="0dp"
-                android:layout_height="28dp"
-                android:layout_marginEnd="232dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_span="1"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/perfilRaca"
-                app:layout_constraintTop_toBottomOf="@+id/perfilSexoPet">
-
-                <RadioButton
-                    android:id="@+id/perfilBotaoMacho"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_span="1"
-                    android:layout_weight="1"
-                    android:text="RadioButton"
-                    tools:text="male" />
-
-                <RadioButton
-                    android:id="@+id/perfilBotaoFemea"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_span="1"
-                    android:layout_weight="1"
-                    android:text="female" />
-            </RadioGroup>
-
-
-        </TableRow>
-
-
-    </TableLayout>
+        <RadioButton
+            android:id="@+id/perfilBotaoFemea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="1"
+            android:layout_weight="1"
+            android:text="Fêmea"
+            tools:text="Fêmea" />
+    </RadioGroup>
 
 
 </android.support.constraint.ConstraintLayout>
