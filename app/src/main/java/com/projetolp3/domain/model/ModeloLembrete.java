@@ -7,6 +7,9 @@ import android.arch.persistence.room.PrimaryKey;
 import com.projetolp3.domain.Tipos;
 
 import java.sql.Time;
+
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.text.format.DateFormat;
 import java.util.Date;
 
@@ -29,6 +32,18 @@ public final class ModeloLembrete {
     private Time hr_notificacao;
     @ColumnInfo(name = "Nota")
     private String nota;
+
+    public ModeloLembrete(String data, @Tipos int tipo, Time horario, String local, long duracao,
+                          Time hr_notificacao, @Nullable String nota) {
+        this.id = id;
+        this.data = data;
+        this.tipo = tipo;
+        this.horario = horario;
+        this.local = local;
+        this.duracao = duracao;
+        this.hr_notificacao = hr_notificacao;
+        this.nota = nota;
+    }
 
     public int getId() {
         return id;

@@ -21,6 +21,14 @@ public final class ModeloPet {
     @ColumnInfo(name = "foto")
     private Image foto;
 
+    public ModeloPet(String nome, String raca, String sexo, Date aniversario, Image foto) {
+        this.nome = nome;
+        this.raca = raca;
+        this.sexo = sexo;
+        this.aniversario = aniversario;
+        this.foto = foto;
+    }
+
     public int getId() {
         return id;
     }
