@@ -9,6 +9,7 @@ import java.util.Date;
 @Entity(tableName = "Pets")
 public final class ModeloPet {
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
     private int id;
     @ColumnInfo(name = "nome")
     private String nome;
@@ -17,11 +18,11 @@ public final class ModeloPet {
     @ColumnInfo(name = "sexo")
     private String sexo;
     @ColumnInfo(name = "aniversario")
-    private Date aniversario;
-    @ColumnInfo(name = "foto")
-    private Image foto;
+    private String aniversario;
+    @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
+    private byte[] foto;
 
-    public ModeloPet(String nome, String raca, String sexo, Date aniversario, Image foto) {
+    public ModeloPet(String nome, String raca, String sexo, String aniversario, byte[] foto) {
         this.nome = nome;
         this.raca = raca;
         this.sexo = sexo;
@@ -61,19 +62,19 @@ public final class ModeloPet {
         this.sexo = sexo;
     }
 
-    public Date getAniversario() {
+    public String getAniversario() {
         return aniversario;
     }
 
-    public void setAniversario(Date aniversario) {
+    public void setAniversario(String aniversario) {
         this.aniversario = aniversario;
     }
 
-    public Image getFoto() {
+    public byte[] getFoto() {
         return foto;
     }
 
-    public void setFoto(Image foto) {
+    public void setFoto(byte[] foto) {
         this.foto = foto;
     }
 }

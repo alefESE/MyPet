@@ -3,8 +3,8 @@ package com.projetolp3.data.local;
 import android.support.annotation.NonNull;
 import android.support.annotation.VisibleForTesting;
 
-import com.projetolp3.data.local.CRUDS.LembreteCRUD;
-import com.projetolp3.data.local.DAOS.LembreteDAO;
+import com.projetolp3.data.util.CRUDs.LembreteCRUD;
+import com.projetolp3.data.local.DAOs.LembreteDAO;
 import com.projetolp3.domain.model.ModeloLembrete;
 import com.projetolp3.util.AppExecutors;
 
@@ -34,6 +34,11 @@ public class LembreteFonteDados implements LembreteCRUD {
             }
         }
         return INSTANCIA;
+    }
+
+    @Override
+    public void refrescaLembrete() {
+
     }
 
     @Override

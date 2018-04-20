@@ -6,19 +6,19 @@ import com.projetolp3.data.adapters.PetRepositorio;
 import com.projetolp3.domain.adapters.CasoUso;
 import com.projetolp3.domain.model.ModeloPet;
 
-public class AdicionarPet extends CasoUso<AdicionarPet.RequisicaoValores, AdicionarPet.RespostaValor> {
+public class EditarPet extends CasoUso<EditarPet.RequisicaoValores, EditarPet.RespostaValor> {
 
     private final PetRepositorio mPetRepositorio;
 
-    public AdicionarPet(@NonNull PetRepositorio petRepositorio) {
+    public EditarPet(@NonNull PetRepositorio petRepositorio) {
         mPetRepositorio = petRepositorio;
     }
 
     @Override
-    protected void executaCasoUso(RequisicaoValores requisicaoValores) {
+    protected void executaCasoUso(EditarPet.RequisicaoValores requisicaoValores) {
         ModeloPet pet = requisicaoValores.getModeloPet();
         mPetRepositorio.salvaPet(pet);
-        getmCasoUsoCallback().onSucesso(new RespostaValor());
+        getmCasoUsoCallback().onSucesso(new EditarPet.RespostaValor(pet));
     }
 
     public static final class RequisicaoValores implements CasoUso.requisicaoValores {
@@ -34,5 +34,14 @@ public class AdicionarPet extends CasoUso<AdicionarPet.RequisicaoValores, Adicio
     }
 
     public static final class RespostaValor implements CasoUso.respostaValor {
+        private final ModeloPet mPet;
+
+        public RespostaValor(@NonNull ModeloPet pet){
+            mPet = pet;
+        }
+
+        public ModeloPet getPet(){
+            return mPet;
+        }
     }
 }

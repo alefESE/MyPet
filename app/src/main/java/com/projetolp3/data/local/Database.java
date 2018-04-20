@@ -4,7 +4,7 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-import com.projetolp3.data.local.DAOS.LembreteDAO;
+import com.projetolp3.data.local.DAOs.LembreteDAO;
 import com.projetolp3.domain.model.ModeloLembrete;
 import com.projetolp3.domain.model.ModeloPet;
 

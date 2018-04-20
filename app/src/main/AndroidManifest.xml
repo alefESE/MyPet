@@ -19,7 +19,7 @@
 
         <!-- splash -->
         <activity
-            android:name="com.projetolp3.presenter.view.activity.SplashScreenActivity"
+            android:name="com.projetolp3.presentation.view.activity.SplashScreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -31,9 +31,9 @@
 
         <!-- main -->
         <activity
-            android:name="com.projetolp3.presenter.view.activity.MainActivity"
+            android:name="com.projetolp3.presentation.view.activity.MainActivity"
             android:label="@string/app_name"></activity>
-        <activity android:name="com.projetolp3.presenter.view.activity.TarefasActivity" />
+        <activity android:name="com.projetolp3.presentation.view.activity.TarefasActivity" />
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -48,9 +48,9 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.projetolp3.presenter.view.activity.MapsActivity"
+            android:name="com.projetolp3.presentation.view.activity.MapsActivity"
             android:label="@string/map_name"></activity>
-        <activity android:name="com.projetolp3.presenter.view.activity.PerfilActivity"></activity>
+        <activity android:name="com.projetolp3.presentation.view.activity.PerfilActivity"></activity>
 
     </application>
 

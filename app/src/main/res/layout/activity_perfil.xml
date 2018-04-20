@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.projetolp3.presenter.view.activity.PerfilActivity">
+    tools:context="com.projetolp3.presentation.view.activity.PerfilActivity">
 
     <ImageView
         android:id="@+id/perfilFoto"

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackgroundApp"
-    tools:context="com.projetolp3.presenter.view.activity.TarefasActivity">
+    tools:context="com.projetolp3.presentation.view.activity.TarefasActivity">
 
     <TextView
         android:id="@+id/textCalendario"
@@ -38,7 +38,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCalendario"
-        tools:context="com.projetolp3.presenter.view.activity.TarefasActivity">
+        tools:context="com.projetolp3.presentation.view.activity.TarefasActivity">
 
         <android.support.constraint.ConstraintLayout
 

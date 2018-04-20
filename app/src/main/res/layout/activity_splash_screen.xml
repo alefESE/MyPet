@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackgroundSplash"
-    tools:context="com.projetolp3.presenter.view.activity.SplashScreenActivity">
+    tools:context="com.projetolp3.presentation.view.activity.SplashScreenActivity">
 
     <ImageView
         android:id="@+id/splashIconeApp"

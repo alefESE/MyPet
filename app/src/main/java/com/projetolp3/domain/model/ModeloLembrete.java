@@ -16,6 +16,7 @@ import java.util.Date;
 @Entity(tableName = "Lembretes")
 public final class ModeloLembrete {
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
     private int id;
     @ColumnInfo(name = "data")
     private String data;
@@ -23,18 +24,18 @@ public final class ModeloLembrete {
     @Tipos
     private int tipo;
     @ColumnInfo(name = "horario")
-    private Time horario;
+    private String horario;
     @ColumnInfo(name = "local")
     private String local;
     @ColumnInfo(name = "duracao")
     private long duracao;
     @ColumnInfo(name = "hr_notificacao")
-    private Time hr_notificacao;
+    private String hr_notificacao;
     @ColumnInfo(name = "Nota")
     private String nota;
 
-    public ModeloLembrete(String data, @Tipos int tipo, Time horario, String local, long duracao,
-                          Time hr_notificacao, @Nullable String nota) {
+    public ModeloLembrete(String data, @Tipos int tipo, String horario, String local, long duracao,
+                          String hr_notificacao, @Nullable String nota) {
         this.id = id;
         this.data = data;
         this.tipo = tipo;
@@ -70,11 +71,11 @@ public final class ModeloLembrete {
         this.tipo = tipo;
     }
 
-    public Time getHorario() {
+    public String getHorario() {
         return horario;
     }
 
-    public void setHorario(Time horario) {
+    public void setHorario(String horario) {
         this.horario = horario;
     }
 
@@ -94,11 +95,11 @@ public final class ModeloLembrete {
         this.duracao = duracao;
     }
 
-    public Time getHr_notificacao() {
+    public String getHr_notificacao() {
         return hr_notificacao;
     }
 
-    public void setHr_notificacao(Time hr_notificacao) {
+    public void setHr_notificacao(String hr_notificacao) {
         this.hr_notificacao = hr_notificacao;
     }
 

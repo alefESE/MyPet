@@ -3,8 +3,8 @@ package com.projetolp3.data.local;
 import android.support.annotation.NonNull;
 import android.support.annotation.VisibleForTesting;
 
-import com.projetolp3.data.local.CRUDS.PetCRUD;
-import com.projetolp3.data.local.DAOS.PetDAO;
+import com.projetolp3.data.util.CRUDs.PetCRUD;
+import com.projetolp3.data.local.DAOs.PetDAO;
 import com.projetolp3.domain.model.ModeloPet;
 import com.projetolp3.util.AppExecutors;
 
@@ -33,6 +33,11 @@ public class PetFonteDados implements PetCRUD {
             }
         }
         return INSTANCIA;
+    }
+
+    @Override
+    public void refrescaPet() {
+
     }
 
     @Override

@@ -4,35 +4,35 @@ import android.support.annotation.NonNull;
 
 import com.projetolp3.data.adapters.PetRepositorio;
 import com.projetolp3.domain.adapters.CasoUso;
-import com.projetolp3.domain.model.ModeloPet;
 
-public class AdicionarPet extends CasoUso<AdicionarPet.RequisicaoValores, AdicionarPet.RespostaValor> {
+public class DeletarPet extends CasoUso<DeletarPet.RequisicaoValores, DeletarPet.RespostaValor> {
 
     private final PetRepositorio mPetRepositorio;
 
-    public AdicionarPet(@NonNull PetRepositorio petRepositorio) {
+    public DeletarPet(@NonNull PetRepositorio petRepositorio) {
         mPetRepositorio = petRepositorio;
     }
 
     @Override
     protected void executaCasoUso(RequisicaoValores requisicaoValores) {
-        ModeloPet pet = requisicaoValores.getModeloPet();
-        mPetRepositorio.salvaPet(pet);
+        int id = requisicaoValores.getId();
+        mPetRepositorio.deletaPet(id);
         getmCasoUsoCallback().onSucesso(new RespostaValor());
     }
 
     public static final class RequisicaoValores implements CasoUso.requisicaoValores {
-        private final ModeloPet mModeloPet;
+        private final int id;
 
-        public RequisicaoValores(@NonNull ModeloPet modeloPet) {
-            mModeloPet = modeloPet;
+        public RequisicaoValores(final int id){
+            this.id = id;
         }
 
-        public ModeloPet getModeloPet() {
-            return mModeloPet;
+        public int getId(){
+            return id;
         }
     }
 
     public static final class RespostaValor implements CasoUso.respostaValor {
+
     }
 }
