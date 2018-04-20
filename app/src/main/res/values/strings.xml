@@ -2,4 +2,7 @@
 <resources>
     <string name="app_name">My Pet</string>
     <string name="map_name">Map</string>
+    <string name="nome">Name:</string>
+    <string name="idade">Age:</string>
+    <string name="sa_de">Health:</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.projetolp3.data.local;
+package com.projetolp3.data;
 
 import com.projetolp3.domain.model.ModeloUsuario;
 import android.support.annotation.NonNull;
