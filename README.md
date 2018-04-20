@@ -2,6 +2,7 @@
 Projeto android arquiteturado com base em MVP-Clean
 # Clean
 Além da estruturação pela arquitetura MVP, é implementada a arquitetura [Clean](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) de forma que a junção desta com o modelo MVP, faz nascer uma nova camada que chamaremos de "Domain".
+![Diagrama](clean_architecture.png)
 # Arquitetura
 O projeto é estruturado em três camadas: Data, Domain e View. O diagrama demonstra as camadas e alguns elementos que exemplificam sua composição.
 ![Diagrama](LP3-Diagrama.png)
